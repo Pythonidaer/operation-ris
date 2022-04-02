@@ -1,0 +1,237 @@
+@font-face {
+  font-family: Terminator;
+  src: url(./terminator.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: black;
+  /* font-family: "Slabo 13px", serif; */
+  font-family: "Arial, Helvetica, sans-serif";
+  background-image: url(./images/vapor.gif);
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  width: 1064px;
+  margin: 0 auto;
+}
+
+/* HEADER CONTENT START */
+
+#header {
+  width: 100%;
+  padding: 0;
+  line-height: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-inner {
+  padding: 0;
+  width: 100%;
+  height: 83px;
+}
+
+#headerNav {
+  display: block;
+}
+
+#header #mainNavWrapper {
+  text-align: center;
+}
+
+nav#mainNavigation {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#mainNavigation ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+}
+
+#mainNavWrapper nav a {
+  font-family: "Signika", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 23px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1em;
+  color: white;
+}
+
+#mainNavWrapper nav .active > a,
+#mainNavWrapper nav .collection > a:hover,
+#mainNavWrapper nav .collection > a:focus {
+  color: #ff0;
+  outline: none;
+}
+
+.collection {
+  padding: 0.75em 1em;
+}
+
+.logo {
+  font-family: Terminator;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: white;
+}
+
+.logo p {
+  font-size: 50px;
+  text-shadow: 4px 4px 2px #ff0000;
+  margin: 30px 0 60px;
+}
+
+/* HEADER CONTENT END */
+
+/* GRID CONTENT START */
+
+/* .main-content */
+.content {
+  /* background: white; */
+  /* flex: 1 1 80%; */
+  /* min-height: 250vh; */
+  /* min-height: 8400px; */
+  /* width: 882px; */
+  /* max-width: 882px; */
+  /* box-sizing: border-box; */
+  /* margin-right: 32px; */
+  /* column-gap: 32px; */
+}
+
+/* .portfolio */
+.tumblr {
+  /* display: grid; */
+  width: 882px;
+  /* height: 100%; */
+  /* grid-template-rows: auto; */
+  /* grid-template-columns: minmax(400px, 440px) minmax(400px, 440px); */
+  /* grid-template-columns: repeat(2, 1fr); */
+  /* grid-template-rows: masonry; */
+  /* grid-template-columns: masonry; */
+  /* display: column; */
+  /* columns: 2; */
+  /* width: 100%; */
+  column-count: 2;
+  column-gap: 0;
+  /* column-width: 220px; */
+  /* break-inside: avoid; */
+  /* gap: 32px; */
+
+  box-sizing: border-box;
+}
+
+.card-item {
+  background: #9b52c8;
+  /* display: flex; */
+  /* changing this to column breaks card header */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  margin-right: 32px;
+  margin-bottom: 32px;
+  /* margin: 0 0 15px; */
+  border: 1px solid black;
+  display: inline-block;
+  /* width: 408px; */
+  width: 408px;
+}
+
+.small {
+  /* grid-row: span 1; */
+}
+
+.medium {
+  /* grid-row: span 2; */
+}
+
+.large {
+  /* grid-row: span 3; */
+}
+
+.sidebar {
+  margin-top: 189px;
+  margin-left: 884px;
+  position: fixed;
+  width: 136px;
+  font-size: 12px;
+  background: brown;
+  height: 350px;
+  float: right;
+}
+
+/* GRID CONTENT END */
+
+/* Card styles */
+.card-header {
+  height: 20px;
+  width: 100%;
+  background: orange;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.card-header ul {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style-type: none;
+  height: 100%;
+}
+
+.card-header li {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 2px 8px 0;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.card-header li:hover,
+.card-header li:focus {
+  cursor: pointer;
+  background: black;
+  color: white;
+}
+
+.card-header li span:first-of-type {
+  text-decoration: underline;
+}
+
+audio,
+source {
+  display: none;
+}
+
+.media-post {
+  display: block;
+  width: 100%;
+  /* height: 100%; */
+  object-fit: contain;
+}
